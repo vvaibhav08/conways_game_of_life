@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cgol"
+version = "0.1.0"
+description = "This is the dependency file to run CGOL"
+authors = ["Vaibhav Vaidya <vaibhavvinayak08@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.11" # For now we use 3.11, but in case we use newer versions of python this should be updated
+pygame = "^2.5.0"
+numpy = "^1.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
