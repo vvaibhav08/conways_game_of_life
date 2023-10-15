@@ -9,6 +9,27 @@ python = "~3.11" # For now we use 3.11, but in case we use newer versions of pyt
 pygame = "^2.5.0"
 numpy = "^1.21.0"
 
+[tool.poetry.group.dev.dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_first_party = []
+
+[tool.black]
+line-length = 120
+preview = true
+target-version = ['py311']
+
+[tool.autoflake]
+in-place = true
+remove-unused-variables = true
+remove-all-unused-imports = true
+exclude = ['test_*.py', '__init__.py']
+
 
 [build-system]
 requires = ["poetry-core"]
